@@ -5,6 +5,8 @@ import { MovieState } from "../movieState";
 import Loading from "../components/Loading";
 import Award from "../components/Award";
 import ImageDisplay from "../components/ImageDisplay";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
 
 function MovieDetail() {
   const history = useHistory();
@@ -34,7 +36,12 @@ function MovieDetail() {
   return (
     <>
       {movie && (
-        <Details>
+        <Details
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <Headline>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt="movie" />
@@ -55,7 +62,7 @@ function MovieDetail() {
   );
 }
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 
