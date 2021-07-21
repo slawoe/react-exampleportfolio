@@ -7,6 +7,7 @@ import Award from "../components/Award";
 import ImageDisplay from "../components/ImageDisplay";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 
 function MovieDetail() {
   const history = useHistory();
@@ -56,6 +57,7 @@ function MovieDetail() {
             ))}
           </Awards>
           <ImageDisplay img={movie.secondaryImg} />
+          <ScrollTop />
         </Details>
       )}
     </>

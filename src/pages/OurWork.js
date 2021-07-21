@@ -13,6 +13,7 @@ import {
   sliderContainerAnimation,
 } from "../animation";
 import { useScroll } from "../hooks/useScroll";
+import ScrollTop from "../components/ScrollTop";
 
 function OurWork() {
   const [element, controls] = useScroll();
@@ -62,6 +63,7 @@ function OurWork() {
           </ImgHider>
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 }
