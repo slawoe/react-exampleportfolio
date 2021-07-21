@@ -2,6 +2,7 @@ import home1 from "../assets/img/home1.png";
 import { BasicLayout, Description, Hide, Image } from "../styles";
 import { motion } from "framer-motion";
 import { titleAnimation, fadeAnimation, photoAnimation } from "../animation";
+import Wave from "./Wave";
 
 const AboutSection = () => {
   return (
@@ -33,6 +34,7 @@ const AboutSection = () => {
           variants={photoAnimation}
         />
       </Image>
+      <Wave />
     </BasicLayout>
   );
 };
