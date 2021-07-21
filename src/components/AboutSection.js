@@ -1,65 +1,40 @@
 import home1 from "../assets/img/home1.png";
 import { BasicLayout, Description, Hide, Image } from "../styles";
 import { motion } from "framer-motion";
+import { titleAnimation, fadeAnimation, photoAnimation } from "../animation";
+import Wave from "./Wave";
 
 const AboutSection = () => {
-  const containerAnimation = {
-    hidden: { x: 100 },
-    show: {
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-        staggerChildren: 0.5,
-        when: "afterChildren",
-      },
-    },
-  };
-  const titleAnimation = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 1 } },
-  };
   return (
     <BasicLayout>
-      {" "}
       <Description>
-        {" "}
-        <motion.div
-          variants={containerAnimation}
-          initial="hidden"
-          animate="show"
-          className="title"
-        >
-          {" "}
+        <motion.div>
           <Hide>
-            {" "}
+            <motion.h2 variants={titleAnimation}>We work to make</motion.h2>
+          </Hide>
+          <Hide>
             <motion.h2 variants={titleAnimation}>
-              We work to make
-            </motion.h2>{" "}
-          </Hide>{" "}
+              your <span>dreams</span> come
+            </motion.h2>
+          </Hide>
           <Hide>
-            {" "}
-            <motion.h2 variants={titleAnimation}>
-              {" "}
-              your <span>dreams</span> come{" "}
-            </motion.h2>{" "}
-          </Hide>{" "}
-          <Hide>
-            {" "}
-            <motion.h2 variants={titleAnimation}>true.</motion.h2>{" "}
-          </Hide>{" "}
-        </motion.div>{" "}
-        <p>
-          {" "}
+            <motion.h2 variants={titleAnimation}>true.</motion.h2>
+          </Hide>
+        </motion.div>
+        <motion.p variants={fadeAnimation}>
           Contact us for any photography or videography ideas that you have. We
-          have professionals with amazing skills.{" "}
-        </p>{" "}
-        <button>Contact us</button>{" "}
-      </Description>{" "}
+          have professionals with amazing skills.
+        </motion.p>
+        <motion.button variants={fadeAnimation}>Contact us</motion.button>
+      </Description>
       <Image>
-        {" "}
-        <img src={home1} alt="guy with a camera" />{" "}
-      </Image>{" "}
+        <motion.img
+          src={home1}
+          alt="guy with a camera"
+          variants={photoAnimation}
+        />
+      </Image>
+      <Wave />
     </BasicLayout>
   );
 };
