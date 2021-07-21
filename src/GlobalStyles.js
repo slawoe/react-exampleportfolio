@@ -11,6 +11,7 @@ html{
 }
 body{
     background: #1b1b1b;
+    overflow-x: hidden;
 }
 h2{
     font-weight: lighter;

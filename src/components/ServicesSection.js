@@ -1,6 +1,7 @@
 import { BasicLayout, Description, Image } from "../styles";
 import styled from "styled-components";
-
+import { scrollRevealAnimation } from "../animation";
+import { useScroll } from "../hooks/useScroll";
 import clock from "../assets/img/clock.svg";
 import diaphragm from "../assets/img/diaphragm.svg";
 import money from "../assets/img/money.svg";
@@ -8,8 +9,14 @@ import teamwork from "../assets/img/teamwork.svg";
 import home2 from "../assets/img/home2.png";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services
+      variants={scrollRevealAnimation}
+      animate={controls}
+      initial="hidden"
+      ref={element}
+    >
       <Description>
         <h2>
           High <span>quality</span> services
