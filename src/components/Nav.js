@@ -11,13 +11,13 @@ function Nav() {
       </h1>
       <ul>
         <li>
-          <Link to="/">ABOUT US</Link>
+          <Link to="/">About us</Link>
         </li>
         <li>
-          <Link to="/work">OUR WORK</Link>
+          <Link to="/work">Our work</Link>
         </li>
         <li>
-          <Link to="/contact">CONTACT US</Link>
+          <Link to="/contact">Contact us</Link>
         </li>
       </ul>
     </Navigation>
@@ -32,6 +32,9 @@ const Navigation = styled.nav`
   padding: 1rem 10rem;
   margin: auto;
   background: #282828;
+  position: sticky;
+  top: 0;
+  z-index: 99;
   #logo {
     font-size: 1.5rem;
     font-family: "Lobster", cursive;
