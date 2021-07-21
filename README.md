@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Portfolio example in React
+
+This is a example portfolio project created with React.
+The implemented animations are done with framer-motion.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
