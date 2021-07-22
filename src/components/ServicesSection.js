@@ -1,4 +1,4 @@
-import { BasicLayout, Description, Image } from "../styles";
+import { BasicLayout, Description, Image, Hide } from "../styles";
 import styled from "styled-components";
 import { scrollRevealAnimation } from "../animation";
 import { useScroll } from "../hooks/useScroll";
@@ -11,51 +11,53 @@ import home2 from "../assets/img/home2.png";
 const ServicesSection = () => {
   const [element, controls] = useScroll();
   return (
-    <Services
-      variants={scrollRevealAnimation}
-      animate={controls}
-      initial="hidden"
-      ref={element}
-    >
-      <Description>
-        <h2>
-          High <span>quality</span> services
-        </h2>
-        <Cards>
-          <Card>
-            <div className="icon">
-              <img src={clock} alt="clock" />
-              <h3>Efficient</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={diaphragm} alt="diaphragm" />
-              <h3>Diaphragm</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={money} alt="money" />
-              <h3>Affordable</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-          <Card>
-            <div className="icon">
-              <img src={teamwork} alt="teamwork" />
-              <h3>Teamwork</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet.</p>
-          </Card>
-        </Cards>
-      </Description>
-      <Image>
-        <img src={home2} alt="home" />
-      </Image>
-    </Services>
+    <Hide>
+      <Services
+        variants={scrollRevealAnimation}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
+        <Description>
+          <h2>
+            High <span>quality</span> services
+          </h2>
+          <Cards>
+            <Card>
+              <div className="icon">
+                <img src={clock} alt="clock" />
+                <h3>Efficient</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={diaphragm} alt="diaphragm" />
+                <h3>Diaphragm</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={money} alt="money" />
+                <h3>Affordable</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+            <Card>
+              <div className="icon">
+                <img src={teamwork} alt="teamwork" />
+                <h3>Teamwork</h3>
+              </div>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </Card>
+          </Cards>
+        </Description>
+        <Image>
+          <img src={home2} alt="home" />
+        </Image>
+      </Services>
+    </Hide>
   );
 };
 
@@ -72,6 +74,9 @@ const Services = styled(BasicLayout)`
 const Cards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  @media (max-width: 1300px) {
+    justify-content: center;
+  }
 `;
 
 const Card = styled.div`
