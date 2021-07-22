@@ -3,6 +3,8 @@
 This is a example portfolio project created with React.
 The implemented animations are done with framer-motion.
 
+![Landingpage Screenshot](./screenshots/screenshot.png)
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
