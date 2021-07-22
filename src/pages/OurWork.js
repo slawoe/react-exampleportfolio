@@ -14,6 +14,7 @@ import {
 } from "../animation";
 import { useScroll } from "../hooks/useScroll";
 import ScrollTop from "../components/ScrollTop";
+import { Hide } from "../styles";
 
 function OurWork() {
   const [element, controls] = useScroll();
@@ -30,9 +31,9 @@ function OurWork() {
         <Link to="/work/the-athlete">
           <motion.h2 variants={fadeAnimation}>The Athlete</motion.h2>
           <motion.div variants={lineAnimation} className="line"></motion.div>
-          <ImgHider>
+          <Hide>
             <motion.img variants={photoAnimation} src={Athlete} alt="athlete" />
-          </ImgHider>
+          </Hide>
         </Link>
       </Movie>
       <Movie
@@ -44,9 +45,9 @@ function OurWork() {
         <Link to="/work/the-racer">
           <motion.h2 variants={fadeAnimation}>The Racer</motion.h2>
           <motion.div variants={lineAnimation} className="line"></motion.div>
-          <ImgHider>
+          <Hide>
             <motion.img variants={photoAnimation} src={Racer} alt="racer" />
-          </ImgHider>
+          </Hide>
         </Link>
       </Movie>
       <Movie
@@ -58,9 +59,9 @@ function OurWork() {
         <Link to="/work/good-times">
           <motion.h2 variants={fadeAnimation}>Good Times</motion.h2>
           <motion.div variants={lineAnimation} className="line"></motion.div>
-          <ImgHider>
+          <Hide>
             <motion.img variants={photoAnimation} src={Goodtimes} alt="" />
-          </ImgHider>
+          </Hide>
         </Link>
       </Movie>
       <ScrollTop />
@@ -72,6 +73,9 @@ const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
+  @media (max-width: 1300px) {
+    padding: 2rem;
+  }
   h2 {
     padding: 1rem 0;
   }
@@ -92,9 +96,6 @@ const Movie = styled(motion.div)`
     height: 70vh;
     object-fit: cover;
   }
-`;
-const ImgHider = styled.div`
-  overflow: hidden;
 `;
 
 const Frame1 = styled(motion.div)`
