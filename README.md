@@ -13,7 +13,7 @@ Current version: 1.0 || 22.07.2021
 ## 🖱 Deployment
 
 The app is deployed on Heroku and can be tested here:
-[OnFire Deployment](https://react-exampleportfolio.herokuapp.com/)
+[Example Portfolio](https://react-exampleportfolio.herokuapp.com/)
 
 ## 📲 Design and layout infos
 
