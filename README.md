@@ -17,7 +17,7 @@ The app is deployed on Heroku and can be tested here:
 
 ## 📲 Design and layout infos
 
-Designed for web, but is also mobile friendly
+Designed for desktop, but is also mobile friendly
 
 ## 🔧 Development
 
